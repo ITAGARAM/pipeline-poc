@@ -57,6 +57,8 @@ jobs:
   deploy-test:
     needs: build
     if: github.ref == 'refs/heads/develop'
+    environment:
+      name: test
     runs-on: ubuntu-latest
     steps:
       - name: Download Artifact
